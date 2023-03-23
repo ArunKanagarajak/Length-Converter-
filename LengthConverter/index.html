@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Length Converter</title>
+    
+</head>
+<body>
+    <div id="wrapper">
+        <h2><u>cms to Inches and Feets</u></h2>
+        <h2>Converter</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Length in cms">
+            
+        </div>
+        <div>
+            <button id="submit" onclick="convert()">Convert to Inches</button>
+        </div>
+        <div>
+            <button id="submit" onclick="convert1()">Convert to Feets</button>
+        </div>
+        <div id="result"> </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+            <h2>(1 Meter= 100cms)</h2>
+        </div>
+    </div>
+    
+    <script>
+        function convert(){
+        let cmV= Number(document.getElementById("input").value)
+        let incV= cmV/2.54
+        let result=document.getElementById("result")
+        result.innerHTML= incV.toFixed(2)+" inches"
+    }
+    function convert1(){
+        let cmV= Number(document.getElementById("input").value)
+        let incV= cmV/30.48
+        let result=document.getElementById("result")
+        result.innerHTML= incV.toFixed(2)+" feets"
+    }
+    </script>
+    
+   
+</body>
+</html>
